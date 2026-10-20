@@ -25,8 +25,8 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 ### Coding
 
 - [MLE-bench](https://arxiv.org/abs/2410.07095) - 75 Kaggle competitions graded against human medal thresholds; measures end-to-end ML engineering by agents, not just code edits.
-- [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Resolve real GitHub issues so hidden tests pass; the founding repo-level coding benchmark. OpenAI stopped reporting the Verified subset in Feb 2026 over contamination and test flaws, so treat Verified scores as historical.
-- [SWE-Bench Pro](https://arxiv.org/abs/2509.16941) - 1,865 long-horizon, multi-file enterprise tasks with public, held-out and commercial splits. Widely reported, but a July 2026 OpenAI audit estimated about 30% of public tasks are broken, so read results with care.
+- [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Resolve real GitHub issues so hidden tests pass; the founding repo-level coding benchmark. OpenAI [stopped reporting the Verified subset in Feb 2026](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) over contamination and test flaws, so treat Verified scores as historical.
+- [SWE-Bench Pro](https://arxiv.org/abs/2509.16941) - 1,865 long-horizon, multi-file enterprise tasks with public, held-out and commercial splits. Widely reported, but a [July 2026 OpenAI audit](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) estimated about 30% of public tasks are broken, so read results with care.
 - [SWE-rebench](https://arxiv.org/abs/2505.20411) - Continuously refreshed, decontaminated SWE tasks mined from new GitHub activity and run in one standardized scaffold; it guards against training-set leakage.
 - [Terminal-Bench 2.0](https://arxiv.org/abs/2601.11868) - 89 hard, human-verified tasks in Docker containers (sysadmin, ML, security, debugging) run via Harbor; the de facto standard for terminal and CLI agents.
 
