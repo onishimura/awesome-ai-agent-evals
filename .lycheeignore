@@ -1,0 +1,2 @@
+# openai.com returns 403 to non-browser clients (bot protection); verified manually 2026-10-20.
+^https://openai\.com/
