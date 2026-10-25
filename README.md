@@ -54,8 +54,10 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 ### Multi-agent & long-horizon
 
+- [FrontierCS 2](https://arxiv.org/abs/2610.29932) - 48 CS R&D tasks across 13 areas. Each task deletes a published paper's contribution from the authors' released code, and a run passes only if the agent beats that original on every held-out metric and workload.
 - [Gaia2](https://arxiv.org/abs/2602.11964) - Successor to GAIA, built on Meta's Agents Research Environments (ARE). Tests dynamic, asynchronous, time-sensitive scenarios with verifiable write actions and multi-agent collaboration.
 - [GDPval](https://arxiv.org/abs/2510.04374) - Expert-graded deliverables from 44 occupations, compared against industry professionals' work; measures economically valuable, real-world task performance.
+- [LHTB 2.0](https://arxiv.org/abs/2610.14146) - 77 containerized terminal tasks across 13 domains, run for three hours with verifier checkpoints every 30 minutes and dense scores for partial progress. It extends the 46-task, 90-minute original, and scores aren't comparable.
 - [MultiAgentBench](https://arxiv.org/abs/2503.01935) - MARBLE framework scenarios that score both task completion and the quality of collaboration and competition across coordination topologies.
 - [TheAgentCompany](https://arxiv.org/abs/2412.14161) - A simulated software company (GitLab, RocketChat, Plane, OwnCloud) with 175 consequential multi-step workplace tasks and checkpoint-based partial credit.
 - [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2) - An agent runs a simulated vending business for a year against adversarial suppliers; measures long-term coherence by final bank balance. The original Vending-Bench paper is arXiv:2502.15840.
@@ -64,6 +66,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 - [BrowserGym](https://github.com/ServiceNow/BrowserGym) - A unified Gym environment for web agents that wraps WebArena, VisualWebArena, WorkArena, MiniWoB and more; pair it with AgentLab to run experiments.
 - [DeepEval](https://github.com/confident-ai/deepeval) - Pytest-style open-source framework with agent metrics (task completion, tool correctness, plan adherence) and component-level tracing.
+- [EGI-Bench](https://arxiv.org/abs/2610.27234) - Salesforce suite that runs eight enterprise agent benchmarks behind one CLI and routes their sub-metrics into a six-part Enterprise General Intelligence score (outcome, tools, planning, grounding, safety, and engineering quality).
 - [Harbor](https://github.com/harbor-framework/harbor) - Containerized framework from the Terminal-Bench team for running agents (Claude Code, Codex CLI, custom) against benchmark datasets at scale; it is the official way to run Terminal-Bench.
 - [Inspect](https://inspect.aisi.org.uk/) - UK AISI's open-source eval framework with first-class agents, tool use, sandboxing (Docker/K8s), external agent support and a log viewer; widely used by safety institutes and METR.
 - [Inspect Evals](https://github.com/UKGovernmentBEIS/inspect_evals) - Community collection of ready-to-run Inspect implementations of agentic, coding, cyber and safety benchmarks, plus an external eval register.
@@ -96,9 +99,11 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 - [CyberGym](https://arxiv.org/abs/2506.02548) - 1,507 real OSS-Fuzz vulnerabilities across 188 projects; the agent must write a proof of concept that crashes the unpatched build but not the patched one.
 - [garak](https://github.com/NVIDIA/garak) - NVIDIA's open-source LLM vulnerability scanner with probes for prompt injection, jailbreaks, data leakage and more.
 - [ImpossibleBench](https://arxiv.org/abs/2510.20270) - Impossible variants of LiveCodeBench and SWE-bench tasks where spec and tests conflict, so any pass is a shortcut; measures how often coding agents cheat on tests.
+- [OverEager-Bench](https://arxiv.org/abs/2605.18583) - 500 benign coding tasks (about 7,500 runs on four agent frameworks and six base models) scored for out-of-scope actions; the framework shifts those rates more than the base model.
 - [Petri](https://github.com/meridianlabs-ai/inspect_petri) - Open-source alignment-auditing agent: an auditor model runs multi-turn scenarios with simulated tools against a target model and a judge scores transcripts against a rubric. Built on Inspect; started at Anthropic, now maintained by Meridian Labs.
 - [PyRIT](https://github.com/microsoft/PyRIT) - Microsoft's open-source framework for automated, multi-turn red teaming of generative AI systems, including agentic targets.
 - [RepliBench](https://arxiv.org/abs/2504.18565) - UK AISI's 20 task families (86 tasks) measuring the components of autonomous replication: obtaining resources, exfiltrating weights, replicating onto compute, and persisting.
+- [SandboxEscapeBench](https://arxiv.org/abs/2603.02277) - UK AISI Inspect benchmark of 18 container-escape scenarios across orchestration, runtime, and kernel layers, run in a sandbox-within-a-sandbox so a breakout stays inside an outer VM.
 
 ## Leaderboards
 
@@ -115,6 +120,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 - [AI Agents That Matter](https://arxiv.org/abs/2407.01502) - Argues for cost-controlled, reproducible agent evaluation and shows how benchmark shortcuts and overfitting inflate agent results.
 - [Emerging Trends in AI Agent Evaluation](https://sage.cs.princeton.edu/trends/) - Survey of 33 shifts in agent evaluation (validity, statistics, contamination, log analysis, field studies, the evaluator ecosystem) with best practices and open problems.
 - [Establishing Best Practices for Building Rigorous Agentic Benchmarks](https://arxiv.org/abs/2507.02825) - The Agentic Benchmark Checklist (ABC), which catalogs task-validity and outcome-validity failures in popular benchmarks and how to avoid them.
+- [Finding the Right Fit: Model-Harness Interactions across Agent Tasks](https://arxiv.org/abs/2610.00917) - 66 model-harness pairings on three agent benchmarks: rankings reverse when the harness changes, and for most models the best harness changes with the task.
 - [Holistic Agent Leaderboard](https://arxiv.org/abs/2510.11977) - 21,730 standardized rollouts across models, scaffolds and benchmarks; documents cost-accuracy tradeoffs and agent shortcut behaviors (ICLR 2026).
 - [Log Analysis Is Necessary for Credible Evaluation of AI Agents](https://arxiv.org/abs/2605.08545) - Taxonomy of validity threats only logs reveal (shortcuts, scaffold artifacts, hidden dangerous actions), with principles for log analysis, illustrated on τ-bench Airline.
 - [Measuring AI Ability to Complete Long Tasks](https://arxiv.org/abs/2503.14499) - METR's time-horizon methodology, which ties task success to human completion time to track how agent capability grows over time.
@@ -123,8 +129,10 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 ## Guides
 
 - [AI Evals: Everything You Need to Know](https://hamel.dev/blog/posts/evals-faq/) - Practitioner FAQ on error analysis, judge calibration, and evaluating multi-turn agent traces and tool calls.
+- [Building a more secure environment for evaluating dangerous capabilities](https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities) - UK AISI's security changes after agents took out-of-scope actions in internet-enabled cyber evaluations (incident reported August 2026): no outbound internet, separate network blocks, and a monitor that can halt a run. Anthropic's companion post-mortem is its [alignment assessment of the UK AISI cybertesting incident](https://www.anthropic.com/research/alignment-assessment-ukaisi).
 - [Demystifying evals for AI agents](https://www.anthropic.com/research/demystifying-evals-for-ai-agents) - Anthropic's practical playbook covering tasks, trials, graders, transcripts and outcomes, capability evals versus regression evals, and grading final state over prescribed paths.
 - [Evaluating the Effectiveness of LLM-Evaluators](https://eugeneyan.com/writing/llm-evaluators/) - A well-sourced review of LLM-as-judge techniques, failure modes and how to validate a judge against human labels.
+- [Securing our frontier model training environment](https://openai.com/index/securing-our-frontier-model-training-environment/) - How OpenAI contains frontier training and evaluation environments: no live internet, overlapping sandboxes and microVMs, and high-compute red-teaming of those boundaries before runs resume.
 - [Separating signal from noise in coding evaluations](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) - OpenAI's audit methodology for finding broken benchmark tasks (overly strict tests, underspecified prompts, low coverage); a worked example of validating an eval before trusting it.
 
 ## Contributing
