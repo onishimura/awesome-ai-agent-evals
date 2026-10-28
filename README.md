@@ -24,6 +24,8 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 ### Coding
 
+- [Android Bench 2.0](https://developer.android.com/bench/methodology/2) - Google's benchmark for models and coding agents on Android development. Version 2.0 (Sep 2026) adds 30 multi-day tasks (app creation, library migrations, platform features, cross-platform conversions) on a private dataset, scored by pass rate and a continuous completion rate, with an LLM visual judge for UI; scores aren't comparable with the 1.0 task set.
+- [HPCAgent-Bench](https://github.com/spcl/HPCAgent-Bench) - 689 kernels across loop-level optimization, HPC codes, and ML models from ETH Zurich's SPCL (the repo now lists about 720), run on CPUs or GPUs and checked by an external judge on hidden fuzzed inputs. Paired runs isolate what a harness, tool, or skill adds, and results report weighted token cost. ([paper](https://arxiv.org/abs/2610.20673))
 - [MLE-bench](https://arxiv.org/abs/2410.07095) - 75 Kaggle competitions graded against human medal thresholds; measures end-to-end ML engineering by agents, not just code edits. Its official leaderboard paused submissions in Apr 2026 pending a v2.
 - [ProgramBench](https://arxiv.org/abs/2605.03546) - 200 tasks where an agent gets only a compiled program and its docs and must rebuild it from scratch, graded by hidden fuzzing-generated behavioral tests; measures whole-project architecture rather than single-issue fixes.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Resolve real GitHub issues so hidden tests pass; the founding repo-level coding benchmark. OpenAI [stopped reporting the Verified subset in Feb 2026](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) over contamination and test flaws, so treat Verified scores as historical.
@@ -54,6 +56,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 ### Multi-agent & long-horizon
 
+- [Agents' Last Exam](https://github.com/rdi-berkeley/agents-last-exam) - Living benchmark of 1,000+ expert-sourced professional workflows across 55 subfields in 13 industry clusters, mostly mixing GUI and CLI work, graded against expert deliverables and milestone checks. Its hardest tier is far from saturated; public v1.1 selects 122 active tasks after 30 retirements. ([paper](https://arxiv.org/abs/2606.05405))
 - [FrontierCS 2](https://arxiv.org/abs/2610.29932) - 48 CS R&D tasks across 13 areas. Each task deletes a published paper's contribution from the authors' released code, and a run passes only if the agent beats that original on every held-out metric and workload.
 - [Gaia2](https://arxiv.org/abs/2602.11964) - Successor to GAIA, built on Meta's Agents Research Environments (ARE). Tests dynamic, asynchronous, time-sensitive scenarios with verifiable write actions and multi-agent collaboration.
 - [GDPval](https://arxiv.org/abs/2510.04374) - Expert-graded deliverables from 44 occupations, compared against industry professionals' work; measures economically valuable, real-world task performance.
