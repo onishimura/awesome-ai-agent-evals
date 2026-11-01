@@ -26,6 +26,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 - [Android Bench 2.0](https://developer.android.com/bench/methodology/2) - Google's benchmark for models and coding agents on Android development. Version 2.0 (Sep 2026) adds 30 multi-day tasks (app creation, library migrations, platform features, cross-platform conversions) on a private dataset, scored by pass rate and a continuous completion rate, with an LLM visual judge for UI; scores aren't comparable with the 1.0 task set.
 - [HPCAgent-Bench](https://github.com/spcl/HPCAgent-Bench) - 689 kernels across loop-level optimization, HPC codes, and ML models from ETH Zurich's SPCL (the repo now lists about 720), run on CPUs or GPUs and checked by an external judge on hidden fuzzed inputs. Paired runs isolate what a harness, tool, or skill adds, and results report weighted token cost. ([paper](https://arxiv.org/abs/2610.20673))
+- [landmine-bench](https://github.com/devanshranjan10/landmines/blob/main/bench/README.md) - 66 coding tasks (21 held out) where the pinned dependency has an open upstream bug and a hidden test rejects the obvious implementation; 31 tasks use issues filed on or after 2026-07-01. Every task is a bug the author's landmine index had already found, so it measures avoidance of indexed bugs, not discovery.
 - [MLE-bench](https://arxiv.org/abs/2410.07095) - 75 Kaggle competitions graded against human medal thresholds; measures end-to-end ML engineering by agents, not just code edits. Its official leaderboard paused submissions in Apr 2026 pending a v2.
 - [ProgramBench](https://arxiv.org/abs/2605.03546) - 200 tasks where an agent gets only a compiled program and its docs and must rebuild it from scratch, graded by hidden fuzzing-generated behavioral tests; measures whole-project architecture rather than single-issue fixes.
 - [SlopCodeBench](https://arxiv.org/abs/2603.24755) - 36 problems and 196 checkpoints where a coding agent must keep extending its own earlier code as the spec grows, with hidden tests that carry prior checkpoints forward, plus structural-erosion and verbosity scores. ([code](https://github.com/SprocketLab/slop-code-bench))
@@ -54,7 +55,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 ### Computer use & OS
 
 - [AndroidWorld](https://github.com/google-research/android_world) - 116 parameterized tasks across 20 real Android apps with reward signals checked from device state; the reference benchmark for mobile agents.
-- [OSWorld 2.0](https://arxiv.org/abs/2606.29537) - 108 long-horizon desktop workflows (median about 1.6 human-hours) with dynamic mid-task changes and checkpoint scoring. It succeeds OSWorld and OSWorld-Verified, and scores aren't comparable with them.
+- [OSWorld 2.0](https://arxiv.org/abs/2606.29537) - 108 long-horizon desktop workflows (median about 1.6 human-hours) with dynamic mid-task changes and checkpoint scoring. It succeeds OSWorld and OSWorld-Verified (scores aren't comparable with them); the recommended runnable release is [2.1](https://github.com/xlang-ai/OSWorld-V2/releases/tag/osworld-v2.1) (Sep 2026), a bug-fix of the same 108 tasks.
 - [Windows Agent Arena](https://github.com/microsoft/WindowsAgentArena) - 150+ tasks in a real Windows OS VM, parallelizable in Azure; covers Windows-native computer-use agents.
 
 ### Multi-agent & long-horizon
@@ -115,6 +116,7 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 
 ## Leaderboards
 
+- [Artificial Analysis Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) - Independent coding-agent leaderboard. v2.0 (Oct 2026) equally weights FrontierCode v1.1, Terminal-Bench 4.0, and SWE-Atlas-QnA-AA, with a published methodology, cost, and reward-hacking rates; FrontierCode's 100 tasks are private. ([methodology](https://artificialanalysis.ai/methodology/coding-agents-benchmarking))
 - [BFCL V4 Leaderboard](https://gorilla.cs.berkeley.edu/leaderboard.html) - Run by the benchmark authors (UC Berkeley); reports function-calling and agentic scores with cost and latency.
 - [Epoch AI Benchmarking Hub](https://epoch.ai/benchmarks) - Independent, reproducible runs of frontier models on agentic and reasoning benchmarks, with methodology and data released.
 - [METR Time Horizons](https://metr.org/time-horizons/) - Independent measurements of the length of software tasks (in human time) frontier models complete at 50% and 80% success (Time Horizon 1.1). No longer updated since Sep 2026 because the task suite saturates at long horizons; treat as a historical reference.
