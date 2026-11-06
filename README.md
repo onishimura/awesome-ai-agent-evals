@@ -1,24 +1,42 @@
 # Awesome AI Agent Evals
 
+[![Link check](https://github.com/onishimura/awesome-ai-agent-evals/actions/workflows/links.yml/badge.svg)](https://github.com/onishimura/awesome-ai-agent-evals/actions/workflows/links.yml)
+
 A curated list of benchmarks, harnesses, grading methods, observability tools, safety evals, leaderboards, papers and guides for **evaluating AI agents**: systems that use tools, browse, write code, and operate computers over many steps. Agents fail in ways a single-turn LLM eval can't see. Errors compound across turns, success depends on the final state of an environment and not on the text of a reply, and scores can swing with the scaffold, the budget and noise between runs. Every entry links to its primary source (paper, official repo, or official docs). Entries are agent-focused, maintained or citable, and checked for current versions. Where a benchmark has a successor, the list points to the current one.
 
 ## Contents
 
+- [Where to start](#where-to-start)
 - [Agent benchmarks](#agent-benchmarks)
   - [Coding](#coding)
-  - [Web & browser](#web-browser)
-  - [Tool use & function calling](#tool-use-function-calling)
-  - [Computer use & OS](#computer-use-os)
-  - [Multi-agent & long-horizon](#multi-agent-long-horizon)
-- [Eval frameworks & harnesses](#eval-frameworks-harnesses)
-- [LLM-as-judge & grading](#llm-as-judge-grading)
+  - [Web & browser](#web--browser)
+  - [Tool use & function calling](#tool-use--function-calling)
+  - [Computer use & OS](#computer-use--os)
+  - [Multi-agent & long-horizon](#multi-agent--long-horizon)
+- [Eval frameworks & harnesses](#eval-frameworks--harnesses)
+- [LLM-as-judge & grading](#llm-as-judge--grading)
 - [Tracing & observability](#tracing-observability)
-- [Safety & red-teaming evals](#safety-red-teaming-evals)
+- [Safety & red-teaming evals](#safety--red-teaming-evals)
 - [Leaderboards](#leaderboards)
 - [Key papers](#key-papers)
 - [Guides](#guides)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Where to start
+
+A shortlist from the entries below, by the kind of agent you're evaluating. Each row is a benchmark to run, the harness that runs it, and a leaderboard to compare against.
+
+| You're evaluating | Benchmark | Run it with | Compare on |
+| --- | --- | --- | --- |
+| Coding agent (repo-level) | [SWE-Bench Pro V2](https://arxiv.org/abs/2610.24206), [SWE-rebench](https://arxiv.org/abs/2505.20411) | [Harbor](https://github.com/harbor-framework/harbor) | [SWE-rebench Leaderboard](https://swe-rebench.com/) |
+| Terminal / CLI agent | [Terminal-Bench](https://github.com/harbor-framework/terminal-bench) | [Harbor](https://github.com/harbor-framework/harbor) | [Terminal-Bench Leaderboard](https://www.tbench.ai/) |
+| Web or deep-research agent | [BrowseComp](https://arxiv.org/abs/2504.12516), [WebArena-Verified](https://github.com/ServiceNow/webarena-verified) | [BrowserGym](https://github.com/ServiceNow/BrowserGym) | - |
+| Tool-calling or customer-facing agent | [τ-bench](https://github.com/sierra-research/tau2-bench), [BFCL V4](https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard), [MCP-Universe](https://arxiv.org/abs/2508.14704) | Benchmark's own runner | [τ-bench Leaderboard](https://taubench.com/), [BFCL V4 Leaderboard](https://gorilla.cs.berkeley.edu/leaderboard.html) |
+| Computer-use agent | [OSWorld 2.0](https://arxiv.org/abs/2606.29537), [AndroidWorld](https://github.com/google-research/android_world) | Benchmark's own runner | - |
+| Agent safety and injection robustness | [AgentDojo](https://github.com/ethz-spylab/agentdojo), [INFUSE](https://arxiv.org/abs/2610.20776), [MemHarmBench](https://arxiv.org/abs/2611.01700) | [Inspect](https://inspect.aisi.org.uk/) | - |
+
+Before you trust any of these numbers, read [Adding Error Bars to Evals](https://arxiv.org/abs/2411.00640) for noise, the [Agentic Benchmark Checklist](https://arxiv.org/abs/2507.02825) for task validity, and [Log Analysis Is Necessary for Credible Evaluation of AI Agents](https://arxiv.org/abs/2605.08545) for what the score alone hides.
 
 ## Agent benchmarks
 
@@ -154,6 +172,10 @@ A curated list of benchmarks, harnesses, grading methods, observability tools, s
 ## Contributing
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the inclusion criteria and entry format before you open a PR.
+
+Thanks to everyone who has contributed:
+
+[![Contributors](https://contrib.rocks/image?repo=onishimura/awesome-ai-agent-evals)](https://github.com/onishimura/awesome-ai-agent-evals/graphs/contributors)
 
 ## License
 
