@@ -103,6 +103,7 @@ Before you trust any of these numbers, read [Adding Error Bars to Evals](https:/
 
 ## Eval frameworks & harnesses
 
+- [agentest](https://github.com/srpadmanabhuni/agentest) - Offline, deterministic pass/fail/n/a checks for tool-using agents over recorded OpenTelemetry GenAI traces, A2A AgentCards and MCP tool lists, with no LLM judge in the verdict path.
 - [BrowserGym](https://github.com/ServiceNow/BrowserGym) - A unified Gym environment for web agents that wraps WebArena, VisualWebArena, WorkArena, MiniWoB and more; pair it with AgentLab to run experiments.
 - [DeepEval](https://github.com/confident-ai/deepeval) - Pytest-style open-source framework with agent metrics (task completion, tool correctness, plan adherence) and component-level tracing.
 - [EGI-Bench](https://arxiv.org/abs/2610.27234) - Salesforce suite that runs eight enterprise agent benchmarks behind one CLI and routes their sub-metrics into a six-part Enterprise General Intelligence score (outcome, tools, planning, grounding, safety, and engineering quality).
